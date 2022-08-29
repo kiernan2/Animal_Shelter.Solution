@@ -1,0 +1,14 @@
+@using Animal_Shelter.Models;
+
+<h3>Here are all the in this species:</h3>
+
+<ol>
+  @foreach ()
+  {
+    <li><a href="/species/@Model.Id/animal/@animal.Id">@animal.Description</a></li>
+  }
+</ol>
+
+<p><a href="/species/@Model.Id/animals/new">Add a new animal</a></p>
+<p><a href="/species">Return to species list</a></p>
+<p><a href="/">Return to Main Page</a></p>

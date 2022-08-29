@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ProjectGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </ProjectGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameCore" Version="5.0.0" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.0-alpha.2"/>
+  </ItemGroup>
+
+</Project>
