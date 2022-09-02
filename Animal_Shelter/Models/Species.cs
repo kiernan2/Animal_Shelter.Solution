@@ -14,7 +14,7 @@ namespace  Animal_Shelter.Models
       Name = speciesName;
       _instances.Add(this);
       Id = _instances.Count;
-      Items = new List<Animal>();
+      Animals = new List<Animal>();
     }
 
     public static void ClearAll()
@@ -27,19 +27,14 @@ namespace  Animal_Shelter.Models
       return _instances;
     }
 
-    public static Category Find(int searchId)
+    public static Species Find(int searchId)
     {
       return _instances[searchId - 1];
     }
 
-    public static Category Find(int searchId)
+    public void AddAnimal(Animal animal)
     {
-      return _instances[searchId - 1];
-    }
-
-    public void AddSpecies(Species species)
-    {
-      Species.Add(species);
+      Animals.Add(animal);
     }
   }
 }

@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using MySql.Data.MySqlClient;
-
 namespace Animal_Shelter.Models
 {
   public class Animal

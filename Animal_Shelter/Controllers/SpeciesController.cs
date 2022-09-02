@@ -5,7 +5,7 @@ using Animal_Shelter.Models;
 
 namespace Animal_Shelter.Controllers 
 {
-  public class SpeciesController : Controllers
+  public class SpeciesController : Controller
   {
     [HttpGet("/species")]
     public ActionResult Index()
@@ -14,11 +14,11 @@ namespace Animal_Shelter.Controllers
       return View();
     }
 
-    [HttpGet("/species")]
-    public ActionResult New()
-    {
+    // [HttpGet("/species")]
+    // public ActionResult New()
+    // {
       
-    }
+    // }
   }
 
 }

@@ -4,9 +4,12 @@ using System.Collections.Generic;
 
 namespace Animal_Shelter.Controllers
 {
-  [HttpGet("/")]
-  public ActionResult Index()
+  public class HomeController : Controller
   {
-    return View();
+    [HttpGet("/")]
+    public ActionResult Index()
+    {
+      return View();
+    }
   }
 }

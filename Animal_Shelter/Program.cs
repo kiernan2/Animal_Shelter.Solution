@@ -9,7 +9,7 @@ namespace Animal_Shelter
     {
       IWebHost host = new WebHostBuilder()
         .UseKestrel()
-        .UseContentRoot(Directory)
+        .UseContentRoot(Directory.GetCurrentDirectory())
         .UseIISIntegration()
         .UseStartup<Startup>()
         .Build();

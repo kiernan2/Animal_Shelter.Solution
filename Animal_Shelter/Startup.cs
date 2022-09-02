@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using Animal_Shelter.Models;
 
 namespace Animal_Shelter
 {
@@ -13,10 +14,10 @@ namespace Animal_Shelter
 
     public Startup(IWebHostEnvironment env)
     {
-      IConfigurationBuilder builder = new ConfigurationBuilder();
+      IConfigurationBuilder builder = new ConfigurationBuilder()
         .SetBasePath(env.ContentRootPath)
         .AddJsonFile("appsettings.json");
-      Configuration = builder.Build;
+      Configuration = builder.Build();
     }
 
     public void ConfigureServices(IServiceCollection services)
@@ -24,14 +25,14 @@ namespace Animal_Shelter
       services.AddMvc();
 
       services.AddEntityFrameworkMySql()
-        .AddDbContext<Animal_Shelter_Context>(
+        .AddDbContext<AnimalShelterContext>(
           options => options.UseMySql(Configuration["ConnectionStrings:DefaultConnection"],
           ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
     }
 
     public void Configure(IApplicationBuilder app)
     {
-      app.UseDeveloperException();
+      app.UseDeveloperExceptionPage();
       app.UseStaticFiles();
       app.UseRouting();
 

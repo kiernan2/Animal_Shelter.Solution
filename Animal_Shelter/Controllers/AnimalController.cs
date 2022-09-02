@@ -11,12 +11,12 @@ namespace Animal_Shelter.Controllers
 
     public AnimalController(AnimalShelterContext db)
     {
-      _db = _db;
+      _db = db;
     }
 
     public ActionResult Index()
     {
-      List<Animal> animal = _db.Animal.ToList();
+      List<Animal> animal = _db.Animals.ToList();
       return View(animal);
     }
 
@@ -28,14 +28,14 @@ namespace Animal_Shelter.Controllers
     [HttpPost]
     public ActionResult Create(Animal animal)
     {
-      _db.Animal.Add(animal);
+      _db.Animals.Add(animal);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
 
     public ActionResult Details(int id)
     {
-      Animal thisAnimal = _db.Animal.FirstOrDefault(animal => animal.AnimalId == id);
+      Animal thisAnimal = _db.Animals.FirstOrDefault(animal => animal.AnimalId == id);
       return View(thisAnimal);
     }
   }
