@@ -7,10 +7,16 @@
 
 <h1>Animal</h1>
 
+@if (@Model.Count == 0)
+{
+  <h3>no Animals have been added yet</h3>
+}
+
 <ul>
   @foreach (Animal animal in Model)
   {
     <li>@Html.ActionLink($"{animal.Description}", "Details", new { id = animal.AnimalId })</li>
+    <li>@animal.Description</li>
   }
 </ul>
 

@@ -5,15 +5,16 @@ using Animal_Shelter.Models;
 
 namespace Animal_Shelter.Controllers
 {
-  public class AnimalController : Controller
+  public class AnimalsController : Controller
   {
     private readonly AnimalShelterContext _db;
 
-    public AnimalController(AnimalShelterContext db)
+    public AnimalsController(AnimalShelterContext db)
     {
       _db = db;
     }
 
+    // [HttpGet("/Animals")]
     public ActionResult Index()
     {
       List<Animal> animal = _db.Animals.ToList();

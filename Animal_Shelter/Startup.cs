@@ -33,8 +33,8 @@ namespace Animal_Shelter
     public void Configure(IApplicationBuilder app)
     {
       app.UseDeveloperExceptionPage();
-      app.UseStaticFiles();
       app.UseRouting();
+      app.UseStaticFiles();
 
       app.UseEndpoints(routes => {
         routes.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
