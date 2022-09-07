@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace  Animal_Shelter.Models
+namespace  AnimalShelter.Models
 {
   public class Species
   {

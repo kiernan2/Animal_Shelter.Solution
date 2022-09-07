@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using Animal_Shelter.Models;
+using AnimalShelter.Models;
 
-namespace Animal_Shelter
+namespace AnimalShelter
 {
   public class Startup
   {

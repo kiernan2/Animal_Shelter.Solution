@@ -1,4 +1,4 @@
-namespace Animal_Shelter.Models
+namespace AnimalShelter.Models
 {
   public class Animal
   {

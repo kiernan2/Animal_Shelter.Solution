@@ -2,8 +2,8 @@
   Layout = "_Layout";
 }
 
-@using Animal_Shelter.Models;
-@model List<Animal_Shelter.Models.Animal>;
+@using AnimalShelter.Models;
+@model List<AnimalShelter.Models.Animal>;
 
 <h1>Animal</h1>
 
@@ -16,7 +16,7 @@
   @foreach (Animal animal in Model)
   {
     <li>@Html.ActionLink($"{animal.Description}", "Details", new { id = animal.AnimalId })</li>
-    <li>@animal.Description</li>
+    <li>Words</li>
   }
 </ul>
 

@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace Animal_Shelter.Models
+namespace AnimalShelter.Models
 {
   public class AnimalShelterContext : DbContext
   {

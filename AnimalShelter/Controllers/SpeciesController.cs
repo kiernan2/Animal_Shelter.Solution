@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System;
-using Animal_Shelter.Models;
+using AnimalShelter.Models;
 
-namespace Animal_Shelter.Controllers 
+namespace AnimalShelter.Controllers 
 {
   public class SpeciesController : Controller
   {

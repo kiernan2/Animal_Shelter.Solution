@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 
-namespace Animal_Shelter
+namespace AnimalShelter
 {
   public class Program
   {

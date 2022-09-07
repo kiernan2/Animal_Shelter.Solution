@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Animal_Shelter.Models;
+using AnimalShelter.Models;
 using System.Collections.Generic;
 
-namespace Animal_Shelter.Controllers
+namespace AnimalShelter.Controllers
 {
   public class HomeController : Controller
   {
