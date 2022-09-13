@@ -40,10 +40,15 @@ namespace AnimalShelter.Controllers
       return View(thisAnimal);
     }
 
+    // public ActionResult Reset()
+    // {
+    //   return RedirectToAction("Reset");
+    // }
+
     public ActionResult Delete(int id)
     {
       Animal thisAnimal = _db.Animals.FirstOrDefault(animal => animal.AnimalId == id);
-      return RedirectToAction("Reset");
+      return RedirectToAction("Delete");
     }
 
     [HttpGet]
@@ -52,8 +57,23 @@ namespace AnimalShelter.Controllers
       return View();
     }
 
+    [HttpGet]
+    public ActionResult Delete()
+    {
+      return View();
+    }
+
+    [HttpPost, ActionName("Delete")]
+    public ActionResult DeleteConfirmed(int id)
+    {
+      Animal thisAnimal = _db.Animals.FirstOrDefault(animal => animal.AnimalId == id);
+      _db.Animals.Remove(thisAnimal);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
     [HttpPost, ActionName("Reset")]
-    public ActionResult DeleteConfirmed()
+    public ActionResult ResetConfirmed()
     {
       _db.Animals.RemoveRange(_db.Animals);
       _db.SaveChanges();
