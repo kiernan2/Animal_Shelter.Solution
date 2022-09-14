@@ -1,0 +1,20 @@
+@{
+  Layout = "_Layout";
+}
+
+@using AnimalShelter.Models;
+@model List<AnimalShelter.Models.Animal>;
+
+<h1>Animal</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>no Animals Are in that set</h3>
+}
+
+<ul>
+
+</ul>
+
+<p>@Html.ActionLink("Add new animal", "Create")</p>
+<p>@Html.ActionLink("Reset animals", "Reset")</p>

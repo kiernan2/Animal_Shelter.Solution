@@ -7,6 +7,18 @@
 
 <h1>Animal</h1>
 
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Species)
+  <select name="species" id="species">
+    <option value="cat">Cat</option>
+    <option value="dog">Dog</option>
+    <option value="bunny">Bunny</option>
+  </select>
+
+  <input type="submit" value="Find animals" />
+}
+
 @if (@Model.Count == 0)
 {
   <h3>no Animals have been added yet</h3>
