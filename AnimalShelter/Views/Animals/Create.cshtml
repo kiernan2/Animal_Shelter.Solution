@@ -15,6 +15,8 @@
     <option value="dog">Dog</option>
     <option value="bunny">Bunny</option>
   </select>
+  @Html.LabelFor(model => model.Age)
+  @Html.TextBoxFor(model => model.Age)
   @Html.LabelFor(model => model.Description)
   @Html.TextBoxFor(model => model.Description)
   <input type="submit" value="Add new animal" />

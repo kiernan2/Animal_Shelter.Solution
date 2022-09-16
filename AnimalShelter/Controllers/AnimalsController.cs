@@ -27,6 +27,13 @@ namespace AnimalShelter.Controllers
       return View(animal);
     }
 
+    public ActionResult Age()
+    {
+      List<Animal> animal = _db.Animal.OrderBy(animal => animal.Age).ToList();
+      return View(animal);
+    }
+    
+
     public ActionResult Create()
     {
       return View();
