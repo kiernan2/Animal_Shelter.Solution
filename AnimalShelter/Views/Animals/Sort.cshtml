@@ -13,7 +13,7 @@
 }
 
 <ul>
-  @foreach (Animal animal in Model)
+    @foreach (Animal animal in Model)
   {
     <li>@Html.ActionLink($"{animal.AnimalName}", "Details", new { id = animal.AnimalId })</li>
   }
@@ -21,5 +21,5 @@
 
 <p>@Html.ActionLink("Search(species)", "Search")</p>
 <p>@Html.ActionLink("Add new animal", "Create")</p>
-<p>@Html.ActionLink("Sort animals", "Sort")</p>
+<p>@Html.ActionLink("Unsort", "Index")</p>
 <p>@Html.ActionLink("Reset animals", "Reset")</p>

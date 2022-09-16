@@ -14,18 +14,16 @@ namespace AnimalShelter.Controllers
       _db = db;
     }
 
-    [HttpPost]
-    public ActionResult Index(string species)
-    {
-      
-      return RedirectToAction("Search");
-    }
-
-
     // [HttpGet("/Animals")]
     public ActionResult Index()
     {
       List<Animal> animal = _db.Animals.ToList();
+      return View(animal);
+    }
+
+    public ActionResult Sort()
+    {
+      List<Animal> animal = _db.Animals.OrderBy(animal => animal.AnimalName).ToList();
       return View(animal);
     }
 
@@ -88,7 +86,13 @@ namespace AnimalShelter.Controllers
       return RedirectToAction("Index");
     }
 
-    [HttpPost, ActionName("Search")]
+    [HttpGet, ActionName("Search")]
+    public ActionResult Search()
+    {
+      return View();
+    }
+
+    [HttpPost, ActionName("SearchSpecies")]
     public ActionResult SearchSpecies(string species)
     {
       List<Animal> SearchList = _db.Animals.Where(Animal => Animal.Species == species).ToList();
